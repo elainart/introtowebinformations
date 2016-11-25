@@ -1,0 +1,15 @@
+<?php
+$dhb = mysqli_connect('localhost','mcgrail_level1','f1rstst3p','mcgrail_level1');
+
+
+if($dhb) {
+    $sql = "SELECT Number FROM Posts";
+    $query = mysqli_query($dhb,$sql);
+   
+     if($query) {
+     $rows = mysqli_num_rows($query);
+     echo "There are $rows posts. <br />\n";
+     }
+     mysqli_close($dhb);
+}
+?>
