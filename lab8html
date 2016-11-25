@@ -1,0 +1,28 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Triangles</title>
+    </head>
+    <body>
+        <h1>Triangles</h1>
+        <form action="triangle.php" method="get">
+            This application will draw a square with black and white images. The square will divide into a black triangle and a slightly larger white triangle. Please choose the dimensions of the square along with an orientation for the triangle.
+            <table>
+                    <tr>
+                        <td>Dimension of the Square: <br /> (Between 5 and 20)</td>
+                        <td> <input type="text" name="dimension" value= "10" /> </td>
+                    </tr>
+                    <tr>
+                        <td>Orientation of Black Triangle: </td>
+                        <td>
+                            <input type="radio" name="target" value="1" /> Upper Left
+                            <input type="radio" name="target" value="2" /> Upper Right <br />
+                            <input type="radio" name="target" value="3" /> Lower Left
+                            <input type="radio" name="target" value="4" checked="checked" /> Lower Right
+                        </td>
+                    </tr>
+                </table>
+            <input type="submit" name="submit" value="Draw" />
+        </form>
+    </body>
+</html>

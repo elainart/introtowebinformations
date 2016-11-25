@@ -1,0 +1,77 @@
+<?php
+$dimension = $_REQUEST['dimension'];
+$target = $_REQUEST['target'];
+
+
+
+
+if(($dimension >= 5) && ($dimension <= 20)) {
+    switch ($target) {
+        case 1:
+            echo " <h1> Upper Left </h1> \n";
+            echo " <table> \n";
+            for($i=$dimension-1; $i >= 0; $i--) {
+                echo "<tr>\n";
+                for($j = 1; $j <= $i; $j++) {
+                    echo " <td><img src=\"http://www.asclab.org/webinf/images/Black.jpg\" alt=\"Black Image\"/></td>\n";
+                }
+               
+                for($k=$j; $k <= $dimension; $k++) {
+                    echo "<td><img src=\"http://www.asclab.org/webinf/images/White.jpg\" alt=\"White Image\"/></td>\n";
+                }
+                echo "</tr>\n";
+            }
+            echo "</table>\n";
+        break;
+       
+        case 2:
+            echo " <h1> Upper Right </h1> \n";
+            echo " <table> \n";
+            for($i=1; $i <= $dimension; $i++) {
+                echo "<tr>\n";
+                for($j = 1; $j <= $i; $j++) {
+                    echo "<td><img src=\"http://www.asclab.org/webinf/images/White.jpg\" alt=\"White Image\"/></td>\n";
+                }
+                for($k = $j; $k <= $dimension; $k++) {
+                    echo "<td><img src=\"http://www.asclab.org/webinf/images/Black.jpg\" alt=\"Black Image\"/></td>\n";
+                }
+                echo "</tr>\n";
+            }
+        break;
+        case 3:
+            echo " <h1>Lower Left </h1>\n";
+            echo " <table> \n";
+            for($i=1; $i <= $dimension; $i++) {
+                echo "<tr>\n";
+                for($j = 1; $j <= $i-1; $j++) {
+                    echo "<td><img src=\"http://www.asclab.org/webinf/images/Black.jpg\" alt=\"Black Image\"/></td>\n";
+                }
+                for($k = $j; $k <= $dimension; $k++) {
+                    echo "<td><img src=\"http://www.asclab.org/webinf/images/White.jpg\" alt=\"White Image\"/></td>\n";
+                }
+                echo "</tr>\n";
+            }
+        break;
+        case 4:
+            echo " <h1>Lower Right</h1> \n";
+            echo " <table> \n";
+            for($i=$dimension; $i >= 1; $i--) {
+                echo "<tr>\n";
+                for($j = 1; $j <= $i; $j++) {
+                    echo " <td><img src=\"http://www.asclab.org/webinf/images/White.jpg\" alt=\"White Image\"/></td>\n";
+                }
+               
+                for($k=$j; $k <= $dimension; $k++) {
+                    echo "<td><img src=\"http://www.asclab.org/webinf/images/Black.jpg\" alt=\"Black Image\"/></td>\n";
+                }
+                echo "</tr>\n";
+            }
+            echo "</table>\n";
+       
+        }
+
+
+} else {
+   echo " <h1>You have not entered a legal dimension.</h1> \n";
+}
+?>
