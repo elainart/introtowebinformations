@@ -1,0 +1,11 @@
+<?php
+$dhb = mysqli_connect('localhost','mcgrail_level1','f1rstst3p','mcgrail_level1');
+
+
+if($dhb) {
+    echo "Connected to database server.<br />\n";
+    mysqli_close($dhb);
+    } else {
+    echo "Not connected to database server <br />\n";
+    }
+?>
