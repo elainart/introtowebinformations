@@ -1,0 +1,29 @@
+<?php
+$dhb = mysqli_connect('localhost','mcgrail_level1','f1rstst3p','mcgrail_level1');
+
+
+if($dhb) {
+    $sql = "SELECT Number, Title, Content FROM Posts ORDER BY Number";
+   
+    $query = mysqli_query($dhb,$sql);
+   
+    if($query) {
+    echo "<table border=\"1\">\n";
+    echo "<tr><th>Number</th><th>Title</th><th>Content</th></tr>\n";
+    $rows = mysqli_num_rows($query);
+   
+    for($i = 0; $i < $rows; $i++) {
+        $Posts = mysqli_fetch_assoc($query);
+        $Number = $Posts['Number'];
+        $Title = $Posts['Title'];
+        $Content = $Posts['Content'];
+       
+        echo"<tr><td>$Number</td>";
+        echo"<td>$Title</td>";
+        echo"<td>$Content</td></tr>\n";
+        }
+    
+     echo"</table>\n";
+    }
+}
+?>
