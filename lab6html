@@ -1,0 +1,28 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Counting</title>
+    </head>
+    <body>
+        <h1>Counting</h1>
+        <form action="countinginfo.php" method="get">
+            <table>
+                <tr>
+                    <td> Enter the Lower Limit (Between 1 and 100):</td>
+                    <td> <input type="text" name="lower" value="1" /></td></tr>
+                <tr>
+                    <td> Enter the Upper Limit (Between 1 and 100):</td>
+                    <td> <input type="text" name="upper" value="10" /></td></tr>
+                <tr>
+                    
+                    <td> </td> <td> <input type="radio" name="target" value="1" /> Below </td></tr>
+                <tr>
+                    <td> Choose a Range:</td>
+                    <td> <input type="radio" name="target" value="2" checked="checked" /> Between </td></tr>
+                <tr>
+                    <td> </td> <td> <input type="radio" name="target" value="3" /> Above </td></tr>
+            </table>
+            <input type="submit" name="Submit" value="Show Range" />
+        </form>
+    </body>
+</html>
