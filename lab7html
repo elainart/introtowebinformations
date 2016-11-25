@@ -1,0 +1,13 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Generate a Multiplication Table</title>
+    </head>
+    <body>
+        <form action="multiplicationinfo.php" method="get" />
+        <h1>Multiplication Table</h1>
+        This online application will generate a multiplication table for numbers from 1 to <b>n</b>. You must supply <b>n</b>, a positive integer between 1 and 100.
+        <p>Integer n: <input type="text" name="n" value="5" /></p>
+        <input type="submit" name="sumbit" value="Submit Query" />
+    </body>
+</html>
