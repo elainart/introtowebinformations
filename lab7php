@@ -1,0 +1,27 @@
+<?php
+$n = $_REQUEST['n'];
+$multiply = ['*'];
+
+
+if(($n <= 100) && ($n >= 1)) {
+    echo "<h1> $n by $n Multiplication Table</h1>\n";
+    echo "<table border=\"1\"> <tr><b><td>X</td>\n";
+    for($i = 1; $i <= $n; $i++) {
+        echo "<td><b>$i</b></td>";
+   
+    }
+    echo "</tr>\n";
+
+
+    for($j = 1; $j <= $n; $j++) {
+        echo "<tr><td><b>$j</b></td>";
+        for($k = 1; $k <= $n; $k++) {
+        $l = $j*$k;
+            echo "<td> $l </td>";
+        }
+    }
+    echo "</table>\n";
+} else {
+    echo "<h1>Please enter a positive integer under 100.</h1>\n";
+}
+?>
